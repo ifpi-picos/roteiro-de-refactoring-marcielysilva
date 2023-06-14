@@ -1,6 +1,6 @@
 const { readFileSync } = require('fs');
 
-class Repositorio {
+module.exports = class Repositorio {
     constructor() {
         this.pecas = JSON.parse(readFileSync('./pecas.json'));
     }
@@ -9,4 +9,3 @@ class Repositorio {
         return this.pecas[apre.id];
     }
 }
-module.exports = Repositorio;
